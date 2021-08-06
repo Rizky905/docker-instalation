@@ -1,5 +1,18 @@
 ### Steps
 
+sudo systemctl status ssh
+ip server 10.203.121.171
+
+akses internet di server
+export http_proxy=http://10.203.121.171:80
+
+
+user/pass nya 
+root/P@ssw0rd@danone
+export http_proxy=http://10.203.121.171:80
+
+systemctl list-unit-files | grep docker
+
 $ sudo dnf -y install dnf-plugins-core
 
 $ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
