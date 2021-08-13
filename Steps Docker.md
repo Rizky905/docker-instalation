@@ -1,7 +1,7 @@
 ### Steps
 sudo service docker status
+sudo service docker start
 #### Docker
-
 $ sudo apt update
 
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -61,3 +61,21 @@ Outcome: In your terminal, you should see docker-compose version number and some
 
 [Install Docker Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 [Install Docker Compose Cross Distro](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
+
+
+to open file in wsl :
+explorer.exe .
+
+change permisson file :
+sudo chmod +rwx mysql_images.docker
+
+docker run --name docker-nginx -p 6969:80 nginx
+$ docker run -d -t -p 1230:80 --name c01 nginx
+
+cara mindahin file dari windows ke linux using pscp
+- cd Desktop
+- dir
+- pscp -P 22 file root@ipaaddres server:/root/
+
+remove docker container 
+docker container rm id
