@@ -42,9 +42,9 @@ https://dev.to/ajeet/so-you-have-installed-windows-subsystem-for-linux-let-s-lea
 - save image => exp : sudo docker save -o php_image.docker php
 - jika mengalami error permission saat mindahin file dari download => exp : sudo chmod +rwx php_images.docker
 - transfer file from your pc into server using PSCP (Putty) 
-    =>  - cd File yang lu simpen tadi dimana
-        - dir
-        - pscp -P 22 file root@ipaaddres server:/root/
+    - cd File yang lu simpen tadi dimana
+    - dir
+    - pscp -P 22 file root@ipaaddres server:/root/
 - setelah selesai copy file => exp : sudo docker load -i php_image.docker
 
 ### install docker compose offline :
