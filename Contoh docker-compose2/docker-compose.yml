@@ -1,0 +1,20 @@
+version: "3"
+services:
+  nginx: 
+    image: nginx:latest
+    ports:
+      - 7000:80
+    links:
+      - php
+    depends_on:
+      - php
+    volumes:
+      - "./nginx:/etc/nginx/conf.d/"
+      - "./:/var/app"
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/var/app"
