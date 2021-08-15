@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - "./config:/etc/nginx/conf.d/"
+      - "./:/var/www/html"
+    links:
+      - php
+    depends_on:
+      - php
+    ports:
+      - 80:80
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/var/www/html"
