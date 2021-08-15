@@ -57,8 +57,8 @@ http://muralitechblog.com/how-to-install-docker-compose-offline/
 - copy file ke server, caranya sama pake pscp
 
 - setelah file ada di server ganti permissionnya 
-    => mv docker-compose /usr/local/bin/
-    => chmod +x /usr/local/bin/docker-compose
+    - mv docker-compose /usr/local/bin/
+    - chmod +x /usr/local/bin/docker-compose
 
 
 ### jika server bisa akses koneksi keluar
