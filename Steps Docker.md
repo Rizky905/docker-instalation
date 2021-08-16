@@ -1,12 +1,12 @@
 ## for using docker
-sudo service docker status
-sudo service docker start
-list container on = docker ps
-list all container = docker ps -a
-stop docker container = docker stop id
-delete docker container = docker rm id
-flush cache = docker system prune
-buka vs code wsl = code .
+- sudo service docker status
+- sudo service docker start
+- list container on = docker ps
+- list all container = docker ps -a
+- stop docker container = docker stop id
+- delete docker container = docker rm id
+- flush cache = docker system prune
+- buka vs code wsl = code .
 
 to open file in wsl = explorer.exe .
 
