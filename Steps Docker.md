@@ -1,46 +1,4 @@
-## for using docker
-- sudo service docker status
-- sudo service docker start
-- list container on = docker ps
-- list all container = docker ps -a
-- stop docker container = docker stop id
-- delete docker container = docker rm id
-- flush cache = docker system prune
-- buka vs code wsl = code .
-
-to open file in wsl = explorer.exe .
-
-change permisson file = sudo chmod +rwx mysql_images.docker
-
-docker run --name docker-nginx -p 6969:80 nginx
-$ docker run -d -t -p 1230:80 --name c01 nginx
-
-how to move file from windows to linux using pscp
-- cd Desktop
-- dir
-- pscp -P 22 file root@ipaaddres server:/root/
-
-change dir = cd directory
-edit file = sudo nano namafile
-
-
-### steps docker mengatasi error
-- ubah permission semua file : chmod -R 777 ./ atau chmod -R 777 /www/
-- masukin databasenya
-- Host nya ganti nama service di docker compose di file php confignya
-
-# Backup
-- docker exec CONTAINER /usr/bin/mysqldump -u root --password=password DATABASE > haccp-dashboard.sql
-
-# Masukin database container ada beberapa cara tested on mysql:5.6
-- bisa pake mysql workbench, tinggal masukin nama host dan port (ini enak gampang lagi)
-
-- bisa pake command langsung
-    - cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
-    - docker exec -i your_container_id mysql -u root -p(password) your_db_name < /your_project_folder/backup.sql (tergantung kalian naro filenya dimana)
-        - kalian nanti bisa lihat hasil dbnya di folder docker mysql = file > var > lib > mysql > nama db kalian
-
-### Steps Docker
+### Steps installasi Docker
 $ sudo apt update
 
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -100,3 +58,47 @@ Outcome: In your terminal, you should see docker-compose version number and some
 
 [Install Docker Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 [Install Docker Compose Cross Distro](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
+
+### How using docker
+- check status = sudo service docker status
+- check start docker = sudo service docker start
+
+- list container on = docker ps
+- list all container = docker ps -a
+
+- stop docker container = docker stop id
+- delete docker container = docker rm id
+- flush cache = docker system prune
+
+- buka vs code wsl = code .
+- to open folder in wsl = explorer.exe .
+- change permisson file = sudo chmod +rwx mysql_images.docker
+
+
+- run docker = docker run --name docker-nginx -p 6969:80 nginx
+- run docker = docker run -d -t -p 1230:80 --name c01 nginx ( sama aja )
+
+### How to move file from windows to linux using pscp
+- cd Desktop
+- dir
+- pscp -P 22 file root@ipaaddres server:/root/
+
+- change dir = cd directory
+- edit file = sudo nano namafile
+
+
+## steps docker mengatasi error ( ini masalah permission file atau ownership file, masih belum nemu solusi yang terbaik)
+- ubah permission semua file : chmod -R 777 ./ atau chmod -R 777 /www/
+- masukin databasenya
+- Host nya ganti nama service di docker compose di file php confignya
+
+## Backup database
+- docker exec CONTAINER /usr/bin/mysqldump -u root --password=password DATABASE > haccp-dashboard.sql
+
+## Masukin database container ada beberapa cara tested on mysql:5.6
+- bisa pake mysql workbench, tinggal masukin nama host dan port (ini enak gampang lagi)
+
+- bisa pake command langsung
+    - cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
+    - docker exec -i your_container_id mysql -u root -p(password) your_db_name < /your_project_folder/backup.sql (tergantung kalian naro filenya dimana)
+        - kalian nanti bisa lihat hasil dbnya di folder docker mysql = file > var > lib > mysql > nama db kalian
