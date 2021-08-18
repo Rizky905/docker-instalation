@@ -24,6 +24,22 @@ change dir = cd directory
 edit file = sudo nano namafile
 
 
+### steps docker mengatasi error
+- ubah permission semua file : chmod -R 777 ./ atau chmod -R 777 /www/
+- masukin databasenya
+- Host nya ganti nama service di docker compose di file php confignya
+
+# Backup
+- docker exec CONTAINER /usr/bin/mysqldump -u root --password=password DATABASE > haccp-dashboard.sql
+
+# Masukin database container ada beberapa cara tested on mysql:5.6
+- bisa pake mysql workbench, tinggal masukin nama host dan port (ini enak gampang lagi)
+
+- bisa pake command langsung
+    - cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
+    - docker exec -i your_container_id mysql -u root -p(password) your_db_name < /your_project_folder/backup.sql (tergantung kalian naro filenya dimana)
+        - kalian nanti bisa lihat hasil dbnya di folder docker mysql = file > var > lib > mysql > nama db kalian
+
 ### Steps Docker
 $ sudo apt update
 
