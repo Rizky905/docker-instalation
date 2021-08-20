@@ -119,3 +119,12 @@ Outcome: In your terminal, you should see docker-compose version number and some
     - cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
     - docker exec -i your_container_id mysql -u root -p(password) your_db_name < /your_project_folder/backup.sql (tergantung kalian naro filenya dimana)
         - kalian nanti bisa lihat hasil dbnya di folder docker mysql = file > var > lib > mysql > nama db kalian
+
+- access database langsung dari image = 
+    - docker exec -it my-mysql(nama container mysql) bash
+    - '# mysql -uroot -p(password)'
+- access databse = mysql -h 127.0.0.1 -P 3308 -u root -ppassword
+- mysql command :
+    - liat semua db = SHOW SCHEMAS; / show database;
+    - use [YOUR_DB_NAME];
+    - 
