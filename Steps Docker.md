@@ -82,6 +82,7 @@ Outcome: In your terminal, you should see docker-compose version number and some
 - cd Desktop
 - dir
 - pscp -P 22 file root@ipaaddres server:/root/
+- pscp -r -P 22 file root@ipaddres server:/root/ (ini untuk copy folder)
 
 - change dir = cd directory
 - edit file = sudo nano namafile
@@ -97,8 +98,24 @@ Outcome: In your terminal, you should see docker-compose version number and some
 
 ## Masukin database container ada beberapa cara tested on mysql:5.6
 - bisa pake mysql workbench, tinggal masukin nama host dan port (ini enak gampang lagi)
+- bisa mount volume langsung di docker filenya :
+    -   version: '3.1'
+    -   services:
+    -   mysql:
+    -   image: mysql
+    -   restart: always
+    -   container_name: db-mysql
+    -   ports:
+    -       - 3307:3306
+    -   environment:
+    -       MYSQL_DATABASE: path
+    -       MYSQL_ROOT_PASSWORD: root
+    -       MYSQL_USER: testuser
+    -       MYSQL_PASSWORD: testpassword
+    -   volumes:
+            - ./filedb:/docker-entrypoint-initdb.d
 
-- bisa pake command langsung
+- bisa pake command langsung :
     - cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
     - docker exec -i your_container_id mysql -u root -p(password) your_db_name < /your_project_folder/backup.sql (tergantung kalian naro filenya dimana)
         - kalian nanti bisa lihat hasil dbnya di folder docker mysql = file > var > lib > mysql > nama db kalian

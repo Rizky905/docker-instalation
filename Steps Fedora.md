@@ -20,8 +20,8 @@ root/P@ssw0rd@danone
 ### change dns nameserver
 - vim /etc/resolv.conf
 - namesever di danone pake remote server windows
-nameserver 10.203.121.3 -> 8.8.8.8
-nameserver 10.203.57.120 -> 8.8.4.4
+- nameserver 10.203.121.3 -> 8.8.8.8
+- nameserver 10.203.57.120 -> 8.8.4.4
 https://www.cyberciti.biz/faq/change-dns-ip-address-rhel-redhat-linux/
 https://wiseindy.com/blog/linux/how-to-set-dns-in-centos-rhel-7-prevent-network-manager-from-overwriting-etc-resolv-conf/
 https://computingforgeeks.com/configure-system-wide-proxy-settings-on-centos-rhel-fedora/
@@ -44,7 +44,7 @@ https://dev.to/ajeet/so-you-have-installed-windows-subsystem-for-linux-let-s-lea
 - transfer file from your pc into server using PSCP (Putty) 
     - cd File yang lu simpen tadi dimana
     - dir
-    - pscp -P 22 file root@ipaaddres server:/root/
+    - pscp -P 22 file root@10.203.121.171:/root/
 - setelah selesai copy file => exp : sudo docker load -i php_image.docker
 
 ### install docker compose offline :
@@ -59,6 +59,8 @@ http://muralitechblog.com/how-to-install-docker-compose-offline/
 - setelah file ada di server ganti permissionnya 
     - mv docker-compose /usr/local/bin/
     - chmod +x /usr/local/bin/docker-compose
+
+- systemctl status docker.service
 
 
 ### jika server bisa akses koneksi keluar
