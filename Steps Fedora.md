@@ -33,7 +33,7 @@ https://computingforgeeks.com/install-and-configure-docker-registry-on-centos-7/
 https://viandwi24.medium.com/belajar-docker-mengenal-apa-itu-registry-images-docker-host-docker-client-docker-engine-4e085baa22c4
 
 
-### install docker image without internet :
+### install docker images without internet :
 https://stackoverflow.com/questions/48125169/how-run-docker-images-without-connect-to-internet
 https://serverfault.com/questions/701248/downloading-docker-image-for-transfer-to-non-internet-connected-machine
 https://dev.to/ajeet/so-you-have-installed-windows-subsystem-for-linux-let-s-learn-how-to-move-files-inside-of-linux-root-system-4kbo
