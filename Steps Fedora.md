@@ -89,5 +89,5 @@ $ id -nG
 
 $ sudo usermod -aG docker <USER>
 
-[Install Docker Fedora](https://docs.docker.com/engine/install/fedora/) 
 ```
+[Install Docker Fedora](https://docs.docker.com/engine/install/fedora/) 
