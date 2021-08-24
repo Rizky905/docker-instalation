@@ -10,6 +10,9 @@
 - semua steps restore ada di folder docker steps
 
 # file docker-compose.yml untuk aplikasi yang akan kalian gunakan
+```sh
+$ echo "Hello World
+```
 version: "3"
 services:
   nginx: 
