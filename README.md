@@ -11,8 +11,6 @@
 
 # file docker-compose.yml untuk aplikasi yang akan kalian gunakan
 ```sh
-$ echo "Hello World
-```
 version: "3"
 services:
   nginx: 
@@ -42,6 +40,8 @@ services:
       MYSQL_DATABASE: database
     ports:
       - "3307:3306"
+```
+
 
 
 
