@@ -4,10 +4,10 @@
 - download folder base-php-GDImage-Zarchiever 
 - pindah ke folder yang didonwload tadi 
 - docker-compose up 
-- backup images => steps ada di file docker steps
+- backup images => steps ada di file [docker steps](https://github.com/Rizky905/docker-instalation/blob/master/Steps%20Fedora.md)
 
 # restore images tadi ke server yang tidak ada internetnya
-- semua steps restore ada di folder docker steps
+- semua steps restore ada di file [docker steps](https://github.com/Rizky905/docker-instalation/blob/master/Steps%20Fedora.md)
 
 # file docker-compose.yml untuk aplikasi yang akan kalian gunakan
 ```sh
