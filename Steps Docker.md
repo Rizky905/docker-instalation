@@ -128,3 +128,8 @@ Outcome: In your terminal, you should see docker-compose version number and some
     - liat semua db = SHOW SCHEMAS; / show database;
     - use [YOUR_DB_NAME];
     - 
+
+### cron job
+- */5 * * * * docker exec -it <container> <command>
+- 0 10 * * * curl -s "http://www.pragnaprinters.com/Pragna/index.php/Notification/todays_ad" > /dev/null
+- */5 * * * * wget http://example.com/check
