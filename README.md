@@ -1,4 +1,4 @@
-## docker-instalation untuk penggunaan offline jika ketemu error GD instalation & ZipArchive di php
+## docker-instalation untuk penggunaan offline jika ketemu error GD instalation & ZipArchive di php tested on php:7.3.27-fpm, NginX, MySql:5.6
 
 # install dulu di local linux kalian yang ada internetnya
 - download folder base-php-GDImage-Zarchiever 
