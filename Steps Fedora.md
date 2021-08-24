@@ -64,7 +64,7 @@ http://muralitechblog.com/how-to-install-docker-compose-offline/
 
 
 ### jika server bisa akses koneksi keluar
-`
+```sh
 docker pull php
 
 systemctl list-unit-files | grep docker
@@ -90,4 +90,4 @@ $ id -nG
 $ sudo usermod -aG docker <USER>
 
 [Install Docker Fedora](https://docs.docker.com/engine/install/fedora/) 
-`
+```
